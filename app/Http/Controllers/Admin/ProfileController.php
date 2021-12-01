@@ -1,19 +1,29 @@
-public function add( )
-{
-    return view('admin.profile.create');
-}
+<?php
 
-public function create( )
-{
-    return redirect('admin/profile/create');
-}
+namespace App\Http\Controllers\Admin;
 
-public function edit ( )
-{
-    return view('admin.profile.adit');
-}
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-public function update( )
+class ProfileController extends Controller
 {
-    return redirect('admin/profile/edit');
+    public function add()
+    {
+        return view('admin.profile.create');
+    }
+
+    public function create()
+    {
+        return redirect('admin/profile/create');
+    }
+
+    public function edit()
+    {
+        return view('admin.profile.edit');
+    }
+
+    public function update()
+    {
+        return redirect('admin/profile/edit');
+    }
 }
