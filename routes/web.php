@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefixx' =>'admin'], function() {
+    Route::get('news/create',
+'Admin\NeasController@add');
+});
